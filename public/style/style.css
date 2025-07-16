@@ -1,0 +1,234 @@
+/* Post */
+
+.post-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.thumbnail {
+  max-width: 200px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Reset some default spacing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body & general typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header/Navbar */
+.navbar {
+  padding: 15px 30px;
+  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #0d6efd;
+}
+
+/* Main container */
+main.container {
+  margin-top: 40px;
+  padding-bottom: 60px;
+}
+
+/* Compose form styles (if used here) */
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form textarea:focus,
+form input[type="file"]:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+form button[type="submit"] {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin-right: 10px;
+    font-size: 0.95rem;
+  }
+
+  main.container {
+    margin-top: 20px;
+    padding: 20px;
+  }
+}
+
+/* Compose Post */
+.compose-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.form-compose {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #4a90e2;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.form-compose input[type="text"],
+.form-compose textarea,
+.form-compose input[type="file"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-compose button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-compose button:hover {
+  background-color: #357ab8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container styles */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Input and textarea styles */
+form input[type="text"],
+form textarea,
+form input[type="file"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form textarea:focus,
+form input[type="file"]:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* File input styling */
+form input[type="file"] {
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* Button styling */
+form button[type="submit"] {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #357ab8;
+}

@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<h1 class="mt-4 mb-3 text-center">All Blog Posts</h1>
+
+<div class="container">
+  <% if (posts.length === 0) { %>
+  <p class="text-center">No posts available yet.</p>
+  <% } else { %> <% posts.forEach(post => { %>
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title"><%= post.title %></h2>
+
+      <% if (post.images && post.images.length > 0) { %>
+      <img
+        src="<%= post.images[0] %>"
+        alt="Post image"
+        class="img-fluid mb-3"
+        style="max-height: 300px"
+      />
+      <% } %>
+
+      <p class="card-text">
+        <%= post.content.length > 150 ? post.content.substring(0, 150) + "..." :
+        post.content %>
+      </p>
+
+      <a
+        href="/posts/<%= encodeURIComponent(post.title) %>"
+        class="btn btn-primary"
+        >Read More</a
+      >
+    </div>
+  </div>
+  <% }); %> <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<h1><%= title || "Untitled Post" %></h1>
+<p><%= content || "No content available." %></p>
+
+<% if (images && images.length > 0) { %>
+<div class="post-images">
+  <% images.forEach(image => { %>
+  <img src="<%= image %>" alt="Post image" class="post-image" />
+  <% }) %>
+</div>
+<% } %> <%- include("partials/footer.ejs") %>

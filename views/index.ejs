@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs") %>
+
+<h1>WELCOME TO BLOG MASTER</h1>
+<p>Feel free to create, read and engage</p>
+
+<div class="post-list">
+  <% posts.forEach(function(post) { %>
+  <div class="post-preview">
+    <h2><a href="/posts/<%= post.title %>"><%= post.title %></a></h2>
+    <p><%= post.content %></p>
+    <% if (post.images && post.images.length > 0) { %>
+    <img src="<%= post.images[0] %>" alt="Post image" class="thumbnail" />
+    <% } %>
+  </div>
+  <% }) %>
+</div>
+
+<%- include("partials/footer.ejs") %>
